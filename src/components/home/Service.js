@@ -4,84 +4,44 @@ import React from 'react'
 const items1 = [
     {
       key: '1',
-      icon: <i class="fa-solid fa-image"></i>,
-      title: 'Consultation',
+      image: 'konsultasi1',
+      title: 'Konsultasi',
+      describe: 'Kami membantu Anda menemukan layanan konsultasi kesehatan hewan disekitar mu. Terdapat dua pilihan layanan yaitu konsultasi ke klinik atau konsultasi ke rumah'
     },
     {
       key: '2',
-      icon: <i class="fa-solid fa-image"></i>,
-      title: 'Grooming',
-    },
-  ]
-
-  const items2 = [
-    {
-      key: '1',
-      icon: <i class="fa-solid fa-image"></i>,
-      title: 'Community',
+      image: 'konsultasi2',
+      title: 'Komunitas',
+      describe: 'Temukan komunitas penyayang hewan peliharaan yang sesuai. Jadikan komunitas ini sebagai wadah untuk semakin menyayangi hewan peliharaaanmu!'
     },
     {
-      key: '2',
-      icon: <i class="fa-solid fa-image"></i>,
-      title: 'Education',
+      key: '3',
+      image: 'konsultasi3',
+      title: 'Artikel',
+      describe: 'Membaca artikel dapat menambah pengetahuan kamu tentang cara merawat hewan peliharan dengan baik dan benar'
     },
   ]
-
-
 
 export const AppService = () => {
   return (
-    <div className='block service'>
+    <div className='service'>
         <div className='container-fluid'>
         <div className='service-content'>
-        <Row gutter={[16, 16]}>
+          <h2>Layanan kami</h2>
+          <p>Kami sadar bahwa hewan peliharaan sangat berperan besar bagi kehidupan pemiliknya. Untuk itu kami hadir memberikan fitur  yang terbaik bagi hewan peliharaan kesayanganmu</p>
+          <Row gutter={[16, 16]}>
             {items1.map(item => {
               return (
-                <Col span={8} key={item.key}>
-                  <div className='content' style={{backgroundColor: item.key == '2'? '#829C5F' : ''}}>
-                    <div className='icon'>
-                      {item.icon}
-                    </div>
-                    <h3>{item.title}</h3>
-                    <p>{item.content}</p>
+                <Col span={6} key={item.key} style={{marginLeft:50}}>
+                  <div className='content'>
+                    <img src={require('../../assets/' + item.image + '.png')}/>
+                    <h4>{item.title}</h4>
+                    <p style={{width:347}}>{item.describe}</p>
                   </div>
                 </Col>
               );
             })}
-        </Row>
-        <div className='desc-service'>
-          <h2>Layanan Kami</h2>
-          <p>
-          Kami hadir untuk memberikan layanan terbaik bagi hewan peliharaan kesayanganmu, 
-          mulai dari pesan layanan konsultasi langsung ke klinik hewan atau ke rumah, layanan 
-          grooming hingga temukan komunitas pemilik hewan terdekat.
-          </p>
-        </div>
-        </div>
-        <div className='service-content'>
-        <Row gutter={[16, 16]}>
-            {items2.map(item => {
-              return (
-                <Col span={8} key={item.key}>
-                  <div className='anotherContent' style={{backgroundColor: item.key == '2'? '#F6FBEE' : ''}}>
-                    <div className='icon'>
-                      {item.icon}
-                    </div>
-                    <h3>{item.title}</h3>
-                    <p>{item.content}</p>
-                  </div>
-                </Col>
-              );
-            })}
-        </Row>
-        <div className='desc-anotherService'>
-          <h3>Mengapa harus kami?</h3>
-          <ul>
-            <li>Pesan layanan konsultasi dengan mudah</li>
-            <li>Layanan grooming di pet care terdekat</li>
-            <li>Temukan komunitas pemilik hewan terdeka</li>
-          </ul>
-        </div>
+          </Row>
         </div>
       </div>
     </div>

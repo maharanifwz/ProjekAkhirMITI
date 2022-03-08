@@ -1,5 +1,4 @@
 import React from "react";
-import { Menu } from "antd";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -49,19 +48,18 @@ export const AppHeader = () => {
       <NavWrapper>
         <NavContainer>
           <NavItem to="/">
-            <a><img>PetMate</img></a>
+            <a className="logo">Pet<span className="identity">Mate</span></a>
           </NavItem>
           <NavItem className="konsultasi" to="/consultation">
             Konsultasi
           </NavItem>
           <NavItem to="/community">Komunitas</NavItem>
-          <NavItem to="/grooming">Layanan Grooming</NavItem>
-          <NavItem to="/education">Artikel</NavItem>
+          <NavItem to="/article">Artikel</NavItem>
           <NavItem to="/aboutus">Tentang Kami</NavItem>
         </NavContainer>
         <RightContainer>
           <Button className="navbar" href="/signin">
-            Sign In
+            Masuk
           </Button>
         </RightContainer>
       </NavWrapper>

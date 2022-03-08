@@ -1,14 +1,13 @@
 import React from 'react'
-import { AppDetail } from '../components/consultation/DetailClinic'
 import { Layout } from 'antd';
 import { AppHeader } from '../components/common/header';
 import { AppFooter } from '../components/common/footer';
 import { Footer } from 'antd/lib/layout/layout';
+import { AppBooking } from '../components/consultation/Booking';
 
 const { Header, Content } = Layout;
 
-
-export const DetailClinic = () => {
+export const Booking = () => {
   return (
     <div>
         <Layout className="mainLayout">
@@ -16,12 +15,12 @@ export const DetailClinic = () => {
           <AppHeader/>
         </Header>
         <Content>
-          <AppDetail/>
+          <AppBooking/>
         </Content>
         <Footer>
           <AppFooter/>
         </Footer>
-      </Layout>  
+      </Layout> 
     </div>
   )
 }

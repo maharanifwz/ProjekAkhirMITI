@@ -23,9 +23,9 @@ const FormSignIn = styled.div`
     }
 `;
 
-export const Signin = () => {
+export const Signup = () => {
   return (
-    <div className='block signin height'>
+    <div className='block signin'>
        <div className='container-fluid'> 
             <FormSignIn>   
                 <Form
@@ -34,12 +34,30 @@ export const Signin = () => {
                     initialValues={{ remember: true }}
                     style={{width: 325}}
                     >
-                    <Form.Item><h2>Masuk</h2></Form.Item>
+                    <Form.Item><h2>Daftar</h2></Form.Item>
+                    <Form.Item
+                        name="nama"
+                        rules={[{ required: true, message: 'Mohon inputkan nama Anda!' }]}
+                    >Nama
+                        <Input/>
+                    </Form.Item>
+                    <Form.Item
+                        name="kontak"
+                        rules={[{ required: true, message: 'Mohon inputkan kontak Anda!' }]}
+                    >Kontak
+                        <Input/>
+                    </Form.Item>
                     <Form.Item
                         name="username"
                         rules={[{ required: true, message: 'Mohon inputkan username Anda!' }]}
                     >Username
-                        <Input placeholder="ex: maharanifwz@gmail.com" />
+                        <Input/>
+                    </Form.Item>
+                    <Form.Item
+                        name="alamat"
+                        rules={[{ required: true, message: 'Mohon inputkan alamat Anda!' }]}
+                    >Alamat
+                        <Input/>
                     </Form.Item>
                     <Form.Item
                         name="password"
@@ -51,22 +69,17 @@ export const Signin = () => {
                         placeholder=""
                         />
                     </Form.Item>
-                    <Form.Item>
-                        <a className="login-form-forgot" href="">
-                        Forgot password?
-                        </a>
-                    </Form.Item>
 
                     <Form.Item>
                         <ButtonContainer>
                             <Button style={{width:300}} type="primary" htmlType="submit" className="login-form-button">
-                            Masuk
+                            Daftar
                             </Button>
                         </ButtonContainer>
                     </Form.Item>
 
                     <Form.Item>
-                        <center>Belum memiliki akun? <a><Link to='/signup' className='identity'>Daftar disini.</Link></a></center>
+                        <center>Sudah memiliki akun? <a><Link to='/signin' className='identity'>Masuk disini.</Link></a></center>
                     </Form.Item>
                 </Form>
             </FormSignIn>

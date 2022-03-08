@@ -5,39 +5,41 @@ import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 const items = [
   {
     key: '1',
-    icon: <i className="fas fa-chart-pie"></i>,
-    title: 'Alea Malika',
-    content: 'cu nostro dissentias consectetuer mel. Ut admodum conceptam mei, cu eam tation fabulas abhorreant. His ex mandamus.',
+    image: 'assets1',
+    title: 'Meisya',
+    content: 'PetMate membuat saya merasa tidak khawatir untuk memesan layanan konsultasi di kala pandemi.',
   },
   {
     key: '2',
-    icon: <i className="fas fa-desktop"></i>,
-    title: 'Toby Park',
-    content: 'cu nostro dissentias consectetuer mel. Ut admodum conceptam mei, cu eam tation fabulas abhorreant. His ex mandamus.',
+    image: 'assets2',
+    title: 'Andrew',
+    content: 'PetMate menyediakan layanan terbaik untuk merawat hewan peliharaan saya.',
   },
   {
     key: '3',
-    icon: <i className="fas fa-database"></i>,
-    title: 'Ungi Juseo',
-    content: 'cu nostro dissentias consectetuer mel. Ut admodum conceptam mei, cu eam tation fabulas abhorreant. His ex mandamus.',
+    image: 'assets3',
+    title: 'Hanan',
+    content: 'Temukan komunitas pada PetMate mempertemukan saya dengan penyayang hewan peliharaan lain.',
   },
   {
     key: '4',
-    icon: <i className="fas fa-database"></i>,
-    title: 'Ungi Juseo',
-    content: 'cu nostro dissentias consectetuer mel. Ut admodum conceptam mei, cu eam tation fabulas abhorreant. His ex mandamus.',
+    image: 'assets1',
+    title: 'Santa',
+    content: 'PetMate membuat saya merasa tidak khawatir untuk memesan layanan konsultasi di kala pandemi.',
+
   },
   {
     key: '5',
-    icon: <i className="fas fa-database"></i>,
-    title: 'Ungi Juseo',
-    content: 'cu nostro dissentias consectetuer mel. Ut admodum conceptam mei, cu eam tation fabulas abhorreant. His ex mandamus.',
+    image: 'assets2',
+    title: 'Alex',
+    content: 'PetMate menyediakan layanan terbaik untuk merawat hewan peliharaan saya.',
+
   },
   {
     key: '6',
-    icon: <i className="fas fa-database"></i>,
-    title: 'Ungi Juseo',
-    content: 'cu nostro dissentias consectetuer mel. Ut admodum conceptam mei, cu eam tation fabulas abhorreant. His ex mandamus.',
+    image: 'assets3',
+    title: 'Hani',
+    content: 'Temukan komunitas pada PetMate mempertemukan saya dengan penyayang hewan peliharaan lain.',
   },
 ]
 
@@ -46,14 +48,15 @@ export const AppReview = () => {
     <div className='block aboutReview'>
       <div className='container-fluid'>
         <div className='titleHolder'>
-          <h2>What our customer say?</h2>
+          <h2>Apa kata mereka?</h2>
         </div>
-        <Carousel arrows nextArrow={<RightOutlined />} prevArrow={<LeftOutlined />} slidesToShow={3} centerMode>
+        <p className='color'>Beberapa testimonial dari para pelanggan yang telah menggunakan layanan pada website PetMate</p>
+        <Carousel arrows nextArrow={<RightOutlined />} prevArrow={<LeftOutlined />} slidesToShow={3}  dots={false} centerMode>
             {items.map((item) => {
               return (
                 <Col key={item.key}>
                   <div className="content">
-                    <div className="icon">{item.icon}</div>
+                    <img src={require('../../assets/' + item.image + '.png')}/>
                     <h3>{item.title}</h3>
                     <p>{item.content}</p>
                   </div>
@@ -61,13 +64,7 @@ export const AppReview = () => {
               );
             })}
           </Carousel>
-        <h2 className='quotesReview'>They motivate us to play, love, seek adventure,</h2>
-        <h2 className='authorReview'>and be loyal." - Tom Hayden</h2>
       </div>
-    </div>
-
-
-
-   
+    </div> 
   )
 }

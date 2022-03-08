@@ -1,13 +1,13 @@
 import React from 'react'
 import { Layout } from 'antd';
-import '../App.css';
+import { AppHeader } from '../components/common/header';
 import { AppFooter } from '../components/common/footer';
 import { Footer } from 'antd/lib/layout/layout';
-import { AppHeader } from '../components/common/header';
-import { AppCommunity } from '../views/Community'
+import { AppAboutUs } from '../views/About Us';
+
 const { Header, Content } = Layout;
 
-export const Community = () => {
+export const AboutUs = () => {
   return (
     <div>
     <Layout className="mainLayout">
@@ -15,7 +15,7 @@ export const Community = () => {
       <AppHeader/>
     </Header>
     <Content>
-      <AppCommunity/>
+      <AppAboutUs/>
     </Content>
     <Footer>
       <AppFooter/>

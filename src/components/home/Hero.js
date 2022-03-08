@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'antd'
 import styled from 'styled-components'
+import { HashLink as Link } from 'react-router-hash-link'
 
 export const ButtonContainer = styled.div`
 .ant-btn {
@@ -17,13 +18,12 @@ export const ButtonContainer = styled.div`
   margin-right: 15px;
   background: #829C5F;
   border-color: #829C5F;
-  width: 138px;
   }
 `;
 
 export const AppHero = () => {
   return (
-    <div className='heroBlock'>
+    <div className='block heroBlock'>
       <h1>Layanan terbaik untuk hewan peliharaan kesayanganmu</h1>
       <p>
         Temukan layanan terbaik dan terdekat untuk hewan peliharaan kesayanganmu dalam <span className='identity'>satu tempat</span>

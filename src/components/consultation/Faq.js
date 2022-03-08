@@ -1,13 +1,24 @@
 import React from 'react'
 import { Collapse } from 'antd';
 import { Card } from 'antd';
+import styled from 'styled-components'
+
+export const CardPanel = styled.div`
+  .ant-card {
+    margin: 0 auto;
+    background: #F6EDD9;
+    border-radius: 10px;
+    padding: 60px 0;
+  }
+`
 
 const { Panel } = Collapse;
 
 export const AppFaq = () => {
   return (
-    <div className='block faqBlock'>
+    <div className='block'>
         <div className='container-fluid'>
+        <CardPanel>
           <Card style={{width: 900}}>
             <div className='titleHolder'>
                 <h2>Frequently Asked Questions</h2>
@@ -24,7 +35,8 @@ export const AppFaq = () => {
           </Panel>
         </Collapse>
         </Card>
-        </div>
+      </CardPanel>
+      </div>
     </div>
   )
 }
