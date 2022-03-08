@@ -1,6 +1,5 @@
 import React from 'react'
 import { Form, Input, Button } from 'antd';
-import { EyeOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { ButtonContainer } from '../components/home/Hero';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -43,13 +42,9 @@ export const Signin = () => {
                     </Form.Item>
                     <Form.Item
                         name="password"
-                        rules={[{ required: true, message: 'Mohon inputkan password Anda' }]}
+                        rules={[{ required: true, message: 'Mohon inputkan password Anda!' }]}
                     >Password
-                        <Input
-                        prefix={<EyeOutlined style={{marginLeft:285, color:'#AFAFAF'}} className="site-form-item-icon" />}
-                        type="password"
-                        placeholder=""
-                        />
+                        <Input.Password/>
                     </Form.Item>
                     <Form.Item>
                         <a className="login-form-forgot" href="">

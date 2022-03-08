@@ -10,6 +10,7 @@ import { Booking } from './pages/Booking';
 import { Article } from './pages/Article';
 import { DetailCommunity } from './pages/DetailCommunity'
 import { AboutUs } from './pages/AboutUs';
+import { ListClinic } from './pages/ListClinic';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
 				<Route exact path="/signin" element={<Signin />} />
 				<Route exact path="/signup" element={<Signup />} />
 				<Route exact path="/aboutus" element={<AboutUs />} />
+				<Route exact path="/consultation/listclinic" element={<ListClinic />} />
 				<Route exact path="/consultation/detailclinic" element={<DetailClinic />} />
 				<Route exact path="/community/detailcommunity" element={<DetailCommunity />} />
 				<Route exact path="/consultation/detailclinic/booking" element={<Booking />} />

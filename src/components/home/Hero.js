@@ -10,6 +10,8 @@ export const ButtonContainer = styled.div`
   color: #829C5F; 
   width: 175px;
   height: 47px;
+  background: none;
+  font-weight:600;
 }  
 
 

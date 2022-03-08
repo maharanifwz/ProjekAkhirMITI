@@ -97,7 +97,7 @@ h6 {
 
 
 .logo img {
-  width: 5px;
+  width: 48px;
 }
 
 /* 
@@ -433,7 +433,8 @@ detail clinic
   margin-bottom: 25px;
 }
 
-.desc-detailClinic .description {
+.desc-detailClinic .description,
+.payment-method {
   display: flex;
 }
 
@@ -669,45 +670,115 @@ footer
 }
 
 /* booking */
-
+.bookingClinic {
+  margin-left: 7%;
+}
 
 .booking-section {
   display: flex;
   margin-top: 65px;
 }
 
-.booking-section .booking-img {
-  margin-top: 25px;
+.clinic-card {
   background: #FFFFFF;
   box-shadow: 0px 6px 4px rgba(37, 42, 49, 0.16);
   border-radius: 10px;
-  padding: 15px;
   width: 295px;
-  height: 308.95px;
   align-items: center;
+  margin-bottom: 0;
 }
 
-.booking-section .booking-img h6 {
+.booking-img {
+  padding: 10px;
+  height: 308.95px;
+  margin-right: 25px;
+}
+
+.booking-section .booking-img h6, 
+.payment-section h6 {
   font-family: Nunito;
   font-weight: bold;
   font-size: 18px;
   color: #000000;
-  margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.booking-section .booking-img h6 {
+  margin-top: 15px;
 }
 
 .booking-section .booking-img .ant-row {
   border-color: #000;
 }
 
-/* payment */
-.payment-desc {
-  width: 700px;
-  height: 171px;
+.ant-input, .ant-input-password,
+.ant-picker  {
   background: #FFFFFF;
   border: 1px solid #E5E5E5;
+  box-sizing: border-box;
   border-radius: 10px;
-  padding: 15px;
+  height: 53px;
+}
+
+/* payment */
+.payment {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.payment-section {
+  margin-top: 65px;
+}
+
+.payment-img {
+  padding: 20px;
+  height: 318px;
+}
+
+.payment-method {
+  justify-content: space-around;
+}
+
+.payment-upload {
+  text-align: center;
+  width: 356px;
+  height:268px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* list */
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.home-content, .home-panel-content, .home-list-content {
+  overflow-y: auto;
+}
+
+.home-content {
+  display: flex;
+  flex: 1;
+}
+
+.home-panel-content {
+  flex-basis: 225px;
+  padding: 1rem;
+  background: #FFFFFF;
+  box-shadow: 0px 6px 4px rgba(37, 42, 49, 0.16);
+  border-radius: 10px;
+  width:100px;
+  height: 319px;
+}
+
+.home-list-content {
+  flex: 1;
+  padding-left: 2rem;
 }
 
 

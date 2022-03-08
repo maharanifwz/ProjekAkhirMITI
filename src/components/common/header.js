@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import logoPetMate from '../../assets/Logo paw.png'
 
 const NavWrapper = styled.nav`
   position: fixed;
@@ -48,7 +49,10 @@ export const AppHeader = () => {
       <NavWrapper>
         <NavContainer>
           <NavItem to="/">
-            <a className="logo">Pet<span className="identity">Mate</span></a>
+            <div className="logo">
+              <img src={logoPetMate}/>
+              <a className="logo">Pet<span className="identity">Mate</span></a>
+            </div>
           </NavItem>
           <NavItem className="konsultasi" to="/consultation">
             Konsultasi

@@ -28,7 +28,7 @@ export const Detail = props => {
             <section className='btn-detailClinic'>
               <ButtonContainer>
                 <Button style={{width:296, marginBottom:25}} type="primary" size="large"><Link to={props.path}>{props.klik}</Link></Button>
-                <Button style={{width:296, background:'none'}}>{props.klik2}</Button>
+                <Button style={{width:296}}>{props.klik2}</Button>
               </ButtonContainer>
               {props.children}
               <div className='desc-detailClinic section2'>
