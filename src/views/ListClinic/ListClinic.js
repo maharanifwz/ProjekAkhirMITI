@@ -3,6 +3,7 @@ import { dataList } from '../../constants/Data';
 import { Filter } from '../../components/consultation/FilterPanel/Filter';
 import { AppClinic } from '../../components/consultation/ListClinic/ListClinic';
 import { useEffect, useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
 
 export const AppListClinic = () => {
@@ -56,7 +57,7 @@ export const AppListClinic = () => {
                        locations={locations}
                        changeChecked={handleChangeChecked}/>
                   </div>
-                  <div className='home-list-content'>
+                  <div className='home-list-content' onClick={<Navigate to='consultation/detailclinic'/>}>
                       {/* List & Empty View*/}
                       <AppClinic
                       list={list}/>

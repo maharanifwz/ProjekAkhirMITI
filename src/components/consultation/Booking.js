@@ -8,6 +8,7 @@ import {
     Select,
     Space,
     DatePicker,
+    Upload
   } from 'antd';
 import { CardPanel } from './Faq';
 import styled from 'styled-components'
@@ -17,6 +18,7 @@ import moment from 'moment';
 import {ButtonContainer} from '../home/Hero'
 import { HashLink as Link } from 'react-router-hash-link';
 import LogoBCA from '../../assets/Logo BCA.png'
+import { UploadOutlined } from '@ant-design/icons';
 
 const format = 'HH:mm';
 
@@ -24,11 +26,25 @@ const { Step } = Steps;
 const { Option } = Select;
 const { TextArea } = Input;
 
-const InputContainer = styled.div`
-  .ant-col {
-      margin-bottom: 25px;
-  }
-`
+//buat upload foto
+const props = {
+    name: 'file',
+    action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+    headers: {
+      authorization: 'authorization-text',
+    },
+    onChange(info) {
+      if (info.file.status !== 'uploading') {
+        console.log(info.file, info.fileList);
+      }
+      if (info.file.status === 'done') {
+        message.success(`${info.file.name} file uploaded successfully`);
+      } else if (info.file.status === 'error') {
+        message.error(`${info.file.name} file upload failed.`);
+      }
+    },
+  };
+//
 
 function onChange(value) {
     console.log(`selected ${value}`);
@@ -58,7 +74,7 @@ const steps = [
                     <h6>Jenis Hewan</h6>
                     <Input.Group compact>
                         <Select
-                            style={{width:300, height:53}}
+                            style={{width:300}}
                             placeholder="Pilih Jenis Hewan"
                             onChange={onChange}
                         >
@@ -90,7 +106,7 @@ const steps = [
                     <h6>Jenis Kelamin</h6>
                     <Input.Group compact>
                         <Select
-                            style={{width:300, height:53}}
+                            style={{width:300}}
                             placeholder="Pilih Jenis Kelamin"
                             onChange={onChange}
                         >
@@ -103,7 +119,7 @@ const steps = [
                     <h6>Jenis Layanan</h6>
                     <Input.Group compact>
                         <Select
-                            style={{width:300, height:53}}
+                            style={{width:300}}
                             placeholder="Pilih Jenis Layanan"
                             onChange={onChange}
                         >
@@ -141,12 +157,12 @@ const steps = [
                 </div>
         </Col>
         <Col span={8}>
-            <div className='payment payment-upload'>
+            <center><div className='payment payment-upload'>
                 <p>
                     Silahkan lakukan pembayaran ke nomor rekening dibawah ini paling lambat <span style={{fontWeight:900}} className='identity'>2 jam</span> sebelum jadwal konsultasi yang andah pilih
                 </p>
                 <div className='payment-method'>
-                    <img src={LogoBCA}/>
+                    <i style={{marginTop:20}} class="fa-solid fa-building-columns fa-2xl"></i>
                     <p style={{fontWeight:600}}>
                         BCA : 123 456 7890 
                         <br/>
@@ -158,15 +174,35 @@ const steps = [
                         Unggah Bukti Pembayaran
                     </Button>
                 </ButtonContainer>
+            </div></center>
+        </Col>
+        <Col span={8}>
+            <div className='payment payment-upload'>
+            <Upload {...props}>
+                <Button style={{marginTop:75}} icon={<UploadOutlined />}>Click to Upload</Button>
+            </Upload>
+            <ButtonContainer>
+                <Button style={{width:215, marginTop:105}}>
+                    Konfirmasi Pembayaran
+                </Button>
+            </ButtonContainer>
             </div>
         </Col>
-        <Col span={8} />
       </Row>
       </div>
     },
     {
       title: 'Last',
-      content: 'Selesai',
+      content: 
+      <div className='payment process'>
+          <p style={{fontSize:20, color: '#829C5F', fontWeight:'bold'}}>Pendaftaran Anda sedang diproses</p>
+          <i style={{marginTop:40, marginBottom:40, color: '829C5F'}} class="fa-solid fa-clock fa-5x"></i>
+          <center><p style={{fontSize:18, width: 370, height: 48, marginBottom: 25}}>Silahkan tunggu verifikasi pendaftaran yang akan kami kirimkan melalui whatsapp</p></center>
+          <ButtonContainer style={{display:'flex'}}>
+            <Button style={{ width:249 }} type="primary" size="large">Lihat Riwayat Pendaftaran</Button>
+            <Button style={{ width:249 }}>Kembali ke Halaman Utama</Button>
+          </ButtonContainer>
+      </div>,
     },
   ];
 

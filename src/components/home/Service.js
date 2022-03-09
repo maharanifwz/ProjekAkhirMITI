@@ -33,11 +33,11 @@ export const AppService = () => {
             {items1.map(item => {
               return (
                 <Col span={6} key={item.key} style={{marginLeft:50}}>
-                  <div className='content'>
+                  <center><div className='content'>
                     <img src={require('../../assets/' + item.image + '.png')}/>
                     <h4>{item.title}</h4>
                     <p style={{width:347}}>{item.describe}</p>
-                  </div>
+                  </div></center>
                 </Col>
               );
             })}

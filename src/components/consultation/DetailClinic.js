@@ -2,8 +2,6 @@ import React from 'react'
 import { Detail } from '../common/Detail'
 import detailClinic from '../../assets/Mask group.png'
 
-
-
 export const AppDetail = () => {
   return (
     <div>
