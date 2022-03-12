@@ -65,9 +65,13 @@ export const AppHeader = () => {
         {/* <Button className="navbar" href="/signin">
             Riwayat
           </Button> */}
+          {(localStorage.getItem("token") === null)?
+          <Button className="navbar" href="/">
+            Keluar
+          </Button> :
           <Button className="navbar" href="/signin">
-            Masuk
-          </Button>
+          Masuk
+        </Button>}
         </RightContainer>
       </NavWrapper>
     </div>

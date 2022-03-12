@@ -7,23 +7,23 @@ import axios from 'axios';
 
 export const AppList = ({ item: { ID, NameClinic, Address, Contact }, }) => {
   const navigate = useNavigate();
-//   const [listClinic, setListClinic] = useState([]);
+  const [listClinic, setListClinic] = useState([]);
 
-//   //connect ke API
-//   const getListClinic = async () =>{
+  //connect ke API
+  const getListClinic = async () =>{
 
-//   try {
-//     const response = await axios.get('https://2977-118-99-76-148.ngrok.io/user/seeclinic').then(res=>{
-//       //buat nampung data
-//       setListClinic(res.data.data);
-//     });
-//   }
-//   catch (error) {
-//     console.log(error);
-//   }
-// }
+  try {
+    const response = await axios.get('https://2977-118-99-76-148.ngrok.io/user/seeclinic').then(res=>{
+      //buat nampung data
+      setListClinic(res.data.data);
+    });
+  }
+  catch (error) {
+    console.log(error);
+  }
+}
 
-// useEffect(()=> {getListClinic();},[]);
+useEffect(()=> {getListClinic();},[]);
 
   return (
     <div className='listItem-wrap' onClick={() => {if(ID === "1"){navigate('/consultation/detailclinic');}}}>

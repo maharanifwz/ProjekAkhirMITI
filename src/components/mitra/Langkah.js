@@ -3,7 +3,7 @@ import { AppForm } from '../common/Form'
 
 export const Langkah = () => {
   return (
-    <div className='mitra'>
+    <div>
         <AppForm
         title='Satu langkah lagi untuk menjadi mitra kami'
         input1='Nomor Rekening'

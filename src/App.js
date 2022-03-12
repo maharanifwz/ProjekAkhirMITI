@@ -13,7 +13,7 @@ import { AboutUs } from './pages/AboutUs';
 import { ListClinic } from './pages/ListClinic';
 import { DaftarMitra } from './pages/Partner/DaftarMitra';
 import { DaftarMitra2 } from './pages/Partner/DaftarMitra2';
-import { DataMitra } from './pages/Partner/DataKlinik';
+import { DataMitra } from './pages/Partner/DataMitra';
 import { LangkahMitra } from './pages/Partner/LangkahMitra';
 import { PrivateRoute, RestrictedRoute } from './config/PrivateRoute';
 import { AuthContext } from './config/Auth'
