@@ -24,7 +24,6 @@ export const DetailKomunitas = () => {
         desc4="Pameran kucing kucing"
         desc5="Pameran kucing kucing"
         desc6="Pameran kucing kucing"
-
         >
       </Detail>
     </div>

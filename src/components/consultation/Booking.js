@@ -199,7 +199,7 @@ const steps = [
           <i style={{marginTop:40, marginBottom:40, color: '829C5F'}} class="fa-solid fa-clock fa-5x"></i>
           <center><p style={{fontSize:18, width: 370, height: 48, marginBottom: 25}}>Silahkan tunggu verifikasi pendaftaran yang akan kami kirimkan melalui whatsapp</p></center>
           <ButtonContainer style={{display:'flex'}}>
-            <Button style={{ width:249 }} type="primary" size="large">Lihat Riwayat Pendaftaran</Button>
+            <Button style={{ width:249 }} type="primary" size="large"><Link to='/consultation/listclinic/detailclinic/booking/riwayatpesanan'>Lihat Riwayat Pendaftaran</Link></Button>
             <Button style={{ width:249 }}>Kembali ke Halaman Utama</Button>
           </ButtonContainer>
       </div>,

@@ -2,6 +2,7 @@ import React from 'react'
 import { Row, Col } from 'antd'
 import { Input, Button } from 'antd'
 import styled from 'styled-components'
+import logoPetMate from '../../assets/Logo paw.png'
 
 const InputContainer = styled.div`
   .ant-input,
@@ -43,7 +44,10 @@ export const AppFooter = () => {
               </ul>
             </Col>
             <Col span={8}>
-              <h4>PetMate</h4>
+              <div className="logo">
+                <img src={logoPetMate}/>
+                <a className="logo">Pet<span className="identity">Mate</span></a>
+              </div>
               <p>Dapatkan informasi terbaru tentang layanan dan promo dari  Pet Mate</p>
               <InputContainer>
                 <Input style={{ width: 'calc(100% - 200px)'}} placeholder="Email Anda" />

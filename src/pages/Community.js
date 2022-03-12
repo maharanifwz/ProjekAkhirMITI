@@ -5,6 +5,7 @@ import { AppFooter } from '../components/common/footer';
 import { Footer } from 'antd/lib/layout/layout';
 import { AppHeader } from '../components/common/header';
 import { AppCommunity } from '../views/Community'
+
 const { Header, Content } = Layout;
 
 export const Community = () => {

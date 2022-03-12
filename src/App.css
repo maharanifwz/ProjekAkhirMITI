@@ -282,8 +282,6 @@ benefit
   font-size: 18px;
 }
 
-
-
 .benefit .quotes1,
 .benefit .quotes2 {
   text-align: center;
@@ -375,6 +373,14 @@ review
   margin: 0 auto 50px;
 }
 
+/* mitra */
+.mitra {
+  background: url('../public/images/mitra.png');
+  background-repeat: no-repeat;
+  background-position: right center; 
+  margin-left: 100px;
+}
+
 /*
 consultation
 -----
@@ -382,7 +388,7 @@ consultation
 .consultation {
   background-image: url('../public/images/Group\ 65.png');
   background-repeat: no-repeat;
-  background-position: left 80% bottom 50%; 
+  background-position: right 15% bottom 250%; 
   margin-left: 70px;
 }
 
@@ -447,7 +453,8 @@ detail clinic
 }
 
 .detailClinic h2, 
-.signin h2 {
+.signin h2,
+.mitra h2 {
   color: #353F28;
 }
 
@@ -499,7 +506,7 @@ community
   margin-left: 70px;
   background-image: url('../public/images/komunitas.png');
   background-repeat: no-repeat;
-  background-position: left 80% bottom 35%;  
+  background-position: right 15% bottom;
   margin-top: 0;
 }
 
@@ -715,6 +722,17 @@ footer
   border-color: #000;
 }
 
+.ant-select-selector {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.ant-steps-item-process .ant-steps-item-icon { 
+  background: red; 
+}
+
 .ant-input, .ant-input-password,
 .ant-picker  {
   background: #FFFFFF;
@@ -772,6 +790,10 @@ footer
   color: #4F692F;
 }
 
+/* riwayat */
+.riwayat {
+  margin-top: 70px;
+}
 
 /* list */
 .home {

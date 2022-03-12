@@ -5,7 +5,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 export const AppForm = props => {
   return (
-    <div className='block signin'>
+    <div className='block'>
        <div className='container-fluid'>    
                 <Form
                     name="normal_login"
@@ -31,13 +31,15 @@ export const AppForm = props => {
                     <Form.Item>
                         <ButtonContainer>
                             <Button style={{width:300}} type="primary" htmlType="submit" className="login-form-button">
-                            {props.klik}
+                            <Link to={props.link}>
+                                {props.klik}
+                            </Link>
                             </Button>
                         </ButtonContainer>
                     </Form.Item>
 
                     <Form.Item>
-                        <center>{props.desc} <a><Link to='/signin' className='identity'>{props.span}</Link></a></center>
+                        <center>{props.desc} <a><Link to={props.path} className='identity'>{props.span}</Link></a></center>
                     </Form.Item>
                 </Form>
         </div>

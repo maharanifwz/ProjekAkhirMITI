@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppListClinic } from '../views/List/ListClinic'
+import { AppListCommunity } from '../views/List/ListCommunity';
 import { Layout } from 'antd';
 import { AppHeader } from '../components/common/header';
 import { AppFooter } from '../components/common/footer';
@@ -7,7 +7,7 @@ import { Footer } from 'antd/lib/layout/layout';
 
 const { Header, Content } = Layout;
 
-export const ListClinic = () => {
+export const ListCommunity = () => {
   return (
     <div> 
       <Layout className="mainLayout">
@@ -15,7 +15,7 @@ export const ListClinic = () => {
           <AppHeader/>
         </Header>
         <Content>
-          <AppListClinic/>
+          <AppListCommunity/>
         </Content>
         <Footer>
           <AppFooter/>

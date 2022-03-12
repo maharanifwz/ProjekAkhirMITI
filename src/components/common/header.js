@@ -62,6 +62,9 @@ export const AppHeader = () => {
           <NavItem to="/aboutus">Tentang Kami</NavItem>
         </NavContainer>
         <RightContainer>
+        {/* <Button className="navbar" href="/signin">
+            Riwayat
+          </Button> */}
           <Button className="navbar" href="/signin">
             Masuk
           </Button>

@@ -57,7 +57,7 @@ export const AppListClinic = () => {
                        locations={locations}
                        changeChecked={handleChangeChecked}/>
                   </div>
-                  <div className='home-list-content' onClick={<Navigate to='consultation/detailclinic'/>}>
+                  <div className='home-list-content'>
                       {/* List & Empty View*/}
                       <AppClinic
                       list={list}/>

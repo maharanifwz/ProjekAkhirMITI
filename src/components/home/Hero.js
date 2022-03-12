@@ -14,7 +14,6 @@ export const ButtonContainer = styled.div`
   font-weight:600;
 }  
 
-
 .ant-btn-primary {
   color: white;
   margin-right: 15px;
