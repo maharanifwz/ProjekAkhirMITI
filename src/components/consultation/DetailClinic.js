@@ -12,7 +12,7 @@ export const AppDetail = () => {
         article1="Rumah Sakit Hewan Dinas Peternakan Provinsi Jawa Timur pada awalnya adalah sebuah Klinik Hewan yang didirikan tahun 2002. Seiring dengan perkembangan zaman dan kebutuhan masyarakat yang semakin meningkat terhadap layanan kesehatan hewan, maka status Klinik Hewan secara bertahap ditingkatkan menjadi Rumah Sakit Hewan."
         article2="Rumah Sakit Hewan Dinas Peternakan Provinsi Jawa Timur merupakan kepanjangan fungsi pelayanan dari Bidang Kesehatan Hewan Dinas Peternakan Provinsi Jawa Timur."
         article3="Dengan terus melakukan peningkatan di segala aspek yang berhubungan dengan pelayanan jasa Medik Veteriner secara berkesinambungan, Rumah Sakit Hewan Dinas Peternakan Provinsi Jawa Timur berkomitmen untuk dapat menjadi Rumah Sakit Hewan Pemerintah yang berkualitas dan terjangkau. Upaya peningkatan kualitas pelayanan antara lain di tempuh melalui pembelajaran berkelanjutan pada tenaga Medik Veteriner contohnya melalui Continuing Profesional Development, seminar, workshop, bimbingan teknis (BIMTEK), yang melibatkan narasumber yang berkompeten di bidangnya. Disamping itu updating (pembaharuan) dan penambahan peralatan pendukung diagnosa juga menjadi agenda tahunan Rumah Sakit Hewan Dinas Peternakan Provinsi Jawa Timur yang ditujukan untuk meningkatkan ketepatan diagnosa."
-        path="/consultation/detailclinic/booking"
+        link="/consultation/detailclinic/booking"
         klik="Buat Janji Konsultasi"
         klik2="Lihat Jadwal Konsultasi"
         service="Layanan yang Tersedia"

@@ -733,6 +733,15 @@ footer
   background: red; 
 }
 
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon{
+  background: #4F692F;
+  border-color: #4F692F;
+}
+
+.ant-select-selector:hover, .ant-select-selector:focus-within {
+  border: 1px solid red !important;
+}
+
 .ant-input, .ant-input-password,
 .ant-picker  {
   background: #FFFFFF;

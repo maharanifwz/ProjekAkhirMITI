@@ -13,7 +13,6 @@ import { AboutUs } from './pages/AboutUs';
 import { ListClinic } from './pages/ListClinic';
 import { DaftarMitra } from './pages/Partner/DaftarMitra';
 import { DaftarMitra2 } from './pages/Partner/DaftarMitra2';
-import { DataMitra } from './pages/Partner/DataMitra';
 import { LangkahMitra } from './pages/Partner/LangkahMitra';
 import { PrivateRoute, RestrictedRoute } from './config/PrivateRoute';
 import { AuthContext } from './config/Auth'
@@ -25,25 +24,25 @@ import { ListCommunity } from './pages/ListCommunity'
 import { BrowserRouter } from 'react-router-dom';
 
 function App () {
-	// // buat nulis token (yg nyambung ke api dr backend)
-	// // set item buat masukin tokennya
-	// // get item buat dapetin isi tokennya
-	// const isAnyToken = JSON.parse(localStorage.getItem('token'));
-	// const userId = JSON.parse(localStorage.getItem('id'));
-	// const [authToken, setAuthToken] = useState(isAnyToken);
-	// const [user, setUser] = useState(userId);
+	// buat nulis token (yg nyambung ke api dr backend)
+	// set item buat masukin tokennya
+	// get item buat dapetin isi tokennya
+	const isAnyToken = JSON.parse(localStorage.getItem('token'));
+	const userId = JSON.parse(localStorage.getItem('id'));
+	const [authToken, setAuthToken] = useState(isAnyToken);
+	const [user, setUser] = useState(userId);
 
-	// // // //buat manggil fungsinya
-	// const setAndGetTokens = (token, id) => {
-	// 	localStorage.setItem('token', JSON.stringify(token));
-	// 	localStorage.setItem('id', JSON.stringify(id));
-	// // 	//buat ngeupdate datanya
-	// 	setAuthToken(token);
-	// 	setUser(id);
-	// };
+	// // //buat manggil fungsinya
+	const setAndGetTokens = (token, id) => {
+		localStorage.setItem('token', JSON.stringify(token));
+		localStorage.setItem('id', JSON.stringify(id));
+	// 	//buat ngeupdate datanya
+		setAuthToken(token);
+		setUser(id);
+	};
   return (
     <>
-		{/* <AuthContext.Provider value={{authToken, setAndGetTokens, user}}> */}
+		<AuthContext.Provider value={{authToken, setAndGetTokens, user}}>
 			<BrowserRouter>
     	<Routes>
 			<Route 
@@ -61,7 +60,6 @@ function App () {
 				<Route exact path="/consultation" element={<Consultation />} />
 				<Route exact path="/daftarmitra" element={<DaftarMitra />} />
 				<Route exact path="/daftarmitra/daftarmitra2" element={<DaftarMitra2 />} />
-				<Route exact path="/daftarmitra/daftarmitra2/datamitra" element={<DataMitra />} />
 				<Route exact path="/daftarmitra/masukmitra" element={<MasukMitra />} />
 				<Route exact path="/daftarmitra/langkahmitra" element={<LangkahMitra />} />
 				<Route exact path="/consultation/listclinic/detailclinic/booking/riwayat" element={<Riwayat />} />
@@ -77,7 +75,7 @@ function App () {
 				<Route components={Error}/>
 		</Routes>
 		</BrowserRouter>
-		{/* </AuthContext.Provider> */}
+		</AuthContext.Provider>
   </>
   )
 }

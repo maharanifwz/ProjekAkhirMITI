@@ -4,6 +4,7 @@ import detailClinic from '../../assets/Mask group.png'
 import { ButtonContainer } from '../home/Hero'
 import { HashLink as Link } from 'react-router-hash-link'
 import {CardPanel} from '../consultation/Faq'
+import { Navigate } from 'react-router-dom'
 
 export const Detail = props => {
   return (
@@ -27,7 +28,7 @@ export const Detail = props => {
           <Col span={12}>
             <section className='btn-detailClinic'>
               <ButtonContainer>
-                <Button style={{width:296, marginBottom:25}} type="primary" size="large"><Link to={props.path}>{props.klik}</Link></Button>
+               <Button style={{width:296, marginBottom:25}} type="primary" size="large"><a href={props.link}>{props.klik}</a></Button>
                 <Button style={{width:296}}>{props.klik2}</Button>
               </ButtonContainer>
               {props.children}

@@ -9,12 +9,12 @@ export const DetailKomunitas = () => {
     <div>
       <Detail 
         title='Komunitas Pecinta Kucing Jakarta' 
-        description='Berdiri Sejak 4 Mare 2016' 
+        description='Berdiri Sejak 4 Maret 2016' 
         image={detailCommunity}
         article1="Komunitas Pecinta Kucing Jakarta - KPKJ merupakan komunitas yang telah berdiri sejak 4 Maret 2016. Komunitas ini memiliki beberapa peraturan diantaranya harus melengkapi foto profil dan berkenalan terlebih dahulu ketika masuk ke komunitas ini. KPKJ juga melarang seluruh anggotanya untuk berbicara seputar SARA dan hal-hal lain yang dapat memicu pertengkaran"
         article2="Salam, KPKJ"
         article3=""
-        path="/consultation/detailclinic/booking"
+        link="https://www.facebook.com/KomunitasPecintaKucingJakarta"
         klik="Menuju Ke Halaman Facebook"
         klik2="Telusuri Komunitas Lainnya"
         service="Event Terbaru"
