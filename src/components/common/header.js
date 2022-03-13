@@ -3,6 +3,7 @@ import { Button } from "antd";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logoPetMate from '../../assets/Logo paw.png'
+import { useAuth } from "../../config/Auth";
 
 const NavWrapper = styled.nav`
   position: fixed;
@@ -43,7 +44,13 @@ const RightContainer = styled.div`
   padding-right: 50px;
 `;
 
+
 export const AppHeader = () => {
+  const { setAndGetTokens } = useAuth();
+	const handleLogout = () => {
+		setAndGetTokens();
+		localStorage.clear();
+	};
   return (
     <div>
       <NavWrapper>
@@ -65,13 +72,27 @@ export const AppHeader = () => {
         {/* <Button className="navbar" href="/signin">
             Riwayat
           </Button> */}
-          {(localStorage.getItem("token") === null)?
+          {/* {(localStorage.getItem("token") !== null)?
           <Button className="navbar" href="/">
             Keluar
           </Button> :
           <Button className="navbar" href="/signin">
           Masuk
-        </Button>}
+        </Button>} */}
+        {(localStorage.getItem("token") === null)?
+			<>
+			<Button className='navbar' to='/'>
+				Keluar
+			</Button>
+			<Button className='navbar' to='/signin'>
+				Masuk
+			</Button>
+			</>
+			:
+			<Button className="navbar" onClick={handleLogout}>
+				Keluar
+			</Button>
+		}
         </RightContainer>
       </NavWrapper>
     </div>

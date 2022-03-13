@@ -29,7 +29,7 @@ export const Detail = props => {
             <section className='btn-detailClinic'>
               <ButtonContainer>
                <Button style={{width:296, marginBottom:25}} type="primary" size="large"><a href={props.link}>{props.klik}</a></Button>
-                <Button style={{width:296}}>{props.klik2}</Button>
+                <Button style={{width:296}}><a href={props.link2}>{props.klik2}</a></Button>
               </ButtonContainer>
               {props.children}
               <div className='desc-detailClinic section2'>

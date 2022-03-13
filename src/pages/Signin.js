@@ -90,8 +90,8 @@ export const Signin = () => {
             <Form.Item>
               <h2>Masuk</h2>
             </Form.Item>
+            <p>Username</p>
             <Form.Item
-              label="Username"
               name="username"
               rules={[
                 { required: true, message: "Mohon inputkan username Anda!" },
@@ -99,8 +99,8 @@ export const Signin = () => {
             >
               <Input placeholder="ex: maharanifwz@gmail.com" />
             </Form.Item>
+            <p>Password</p>
             <Form.Item
-              label="Password"
               name="password"
               rules={[
                 { required: true, message: "Mohon inputkan password Anda!" },
@@ -132,7 +132,7 @@ export const Signin = () => {
               <center>
                 Belum memiliki akun?{" "}
                 <a>
-                  <Link to="https://facebook.com" className="identity">
+                  <Link to="/signup" className="identity">
                     Daftar disini.
                   </Link>
                 </a>

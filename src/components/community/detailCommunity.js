@@ -15,6 +15,7 @@ export const DetailKomunitas = () => {
         article2="Salam, KPKJ"
         article3=""
         link="https://www.facebook.com/KomunitasPecintaKucingJakarta"
+        link2=""
         klik="Menuju Ke Halaman Facebook"
         klik2="Telusuri Komunitas Lainnya"
         service="Event Terbaru"

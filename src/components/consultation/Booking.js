@@ -199,7 +199,7 @@ const steps = [
           <i style={{marginTop:40, marginBottom:40, color: '829C5F'}} class="fa-solid fa-clock fa-5x"></i>
           <center><p style={{fontSize:18, width: 370, height: 48, marginBottom: 25}}>Silahkan tunggu verifikasi pendaftaran yang akan kami kirimkan melalui whatsapp</p></center>
           <ButtonContainer style={{display:'flex'}}>
-            <Button style={{ width:249 }} type="primary" size="large"><Link to='/consultation/listclinic/detailclinic/booking/riwayatpesanan'>Lihat Riwayat Pendaftaran</Link></Button>
+            <Button style={{ width:249 }} type="primary" size="large" onClick={() => message.success('Processing complete!')}><Link to='/consultation/listclinic/detailclinic/booking/riwayatpesanan'>Lihat Riwayat Pendaftaran</Link></Button>
             <Button style={{ width:249 }}>Kembali ke Halaman Utama</Button>
           </ButtonContainer>
       </div>,
@@ -235,11 +235,11 @@ const [current, setCurrent] = React.useState(0);
                         Lihat Kembali Jadwal Praktik
                     </Button>
                     )} */}
-                    {current === steps.length - 1 && (
-                    <Button type="primary" onClick={() => message.success('Processing complete!')}>
+                    {/* {current === steps.length - 1 && (
+                    <Button type="primary">
                         Done
                     </Button>
-                    )}
+                    )} */}
                     {current < steps.length - 1 && (
                     <ButtonContainer>
                         <Button style={{marginLeft:750, marginTop:15, width:215, fontWeight:600}} type="primary" onClick={() => next()}>
