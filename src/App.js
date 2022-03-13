@@ -49,23 +49,17 @@ function App () {
 				exact 
 				path="/" 
 				element={
-				<PrivateRoute>
-					<Homepage/>
-				</PrivateRoute>} />
+					<Homepage/>} />
 			<Route 
 				exact 
 				path="/signin" 
 				element={
-				<RestrictedRoute>
-					<Signin />
-				</RestrictedRoute>} />
+					<Signin />} />
 			<Route 
 				exact 
 				path="/signup" 
 				element={
-				<PrivateRoute>
-					<Signup />
-				</PrivateRoute>} />
+					<Signup />} />
 				<Route exact path="/consultation" element={<Consultation />} />
 				<Route exact path="/daftarmitra" element={<DaftarMitra />} />
 				<Route exact path="/daftarmitra/daftarmitra2" element={<DaftarMitra2 />} />

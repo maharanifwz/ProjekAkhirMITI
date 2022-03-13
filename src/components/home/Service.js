@@ -24,7 +24,7 @@ const items1 = [
 
 export const AppService = () => {
   return (
-    <div className='service'>
+    <div id='service' className='service'>
         <div className='container-fluid'>
         <div className='service-content'>
           <h2>Layanan kami</h2>
@@ -32,7 +32,7 @@ export const AppService = () => {
           <Row gutter={[16, 16]}>
             {items1.map(item => {
               return (
-                <Col span={6} key={item.key} style={{marginLeft:50}}>
+                <Col span={6} key={item.key} style={{margin:'0 auto'}}>
                   <center><div className='content'>
                     <img src={require('../../assets/' + item.image + '.png')}/>
                     <h4>{item.title}</h4>
