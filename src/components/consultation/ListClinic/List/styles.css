@@ -14,8 +14,6 @@
   }
   .listItem-wrap header {
     display: flex;
-    justify-content: space-between;
-    margin: 1rem 0 0.5rem 0.5rem;
     align-items: center;
   }
   
@@ -23,11 +21,17 @@
     font-size: 0.8rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 0.5rem 0 0.5rem 0.5rem;
 
   }
   .listItem-wrap footer p:first-child span {
     color: rgba(0, 0, 0, 0.26);
     font-weight: 600;
+  }
+
+  .listItem-wrap h5 {
+    padding-top: 5px;
+  }
+
+  .listItem-wrap p {
+    margin: 0;
   }

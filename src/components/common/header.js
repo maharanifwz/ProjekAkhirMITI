@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Button } from "antd";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import styled from "styled-components";
 import logoPetMate from '../../assets/Logo paw.png'
 import { useAuth } from "../../config/Auth";
+import { useNavigate } from "react-router-dom";
+import { accountContext } from "../../App";
+
 
 const NavWrapper = styled.nav`
   position: fixed;
@@ -44,13 +47,19 @@ const RightContainer = styled.div`
   padding-right: 50px;
 `;
 
-
 export const AppHeader = () => {
   const { setAndGetTokens } = useAuth();
+  const navigate = useNavigate();
+  const {account, setAccount} = useContext(accountContext)
+
 	const handleLogout = () => {
-		setAndGetTokens();
-		localStorage.clear();
+		setAccount(false)
 	};
+
+  const coba = () => {
+    navigate('/signin')
+  }
+
   return (
     <div>
       <NavWrapper>
@@ -79,18 +88,12 @@ export const AppHeader = () => {
           <Button className="navbar" href="/signin">
           Masuk
         </Button>} */}
-        {(localStorage.getItem("token") === null)?
-			<>
-			<Button className='navbar' to='/'>
+        {account === true ?
+			<Button className='navbar' onClick={handleLogout}>
 				Keluar
-			</Button>
-			<Button className='navbar' to='/signin'>
+			</Button>:
+			<Button className='navbar' onClick={coba}>
 				Masuk
-			</Button>
-			</>
-			:
-			<Button className="navbar" onClick={handleLogout}>
-				Keluar
 			</Button>
 		}
         </RightContainer>

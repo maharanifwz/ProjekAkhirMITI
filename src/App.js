@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import { Route, Routes, Switch} from 'react-router-dom';
 import { Homepage } from './pages/Homepage';
 import { Consultation } from './pages/Consultation';
@@ -23,6 +23,8 @@ import { MasukMitra } from './pages/Partner/Masuk';
 import { ListCommunity } from './pages/ListCommunity'
 import { BrowserRouter } from 'react-router-dom';
 
+export const accountContext = createContext(null)
+
 function App () {
 	// buat nulis token (yg nyambung ke api dr backend)
 	// set item buat masukin tokennya
@@ -31,6 +33,7 @@ function App () {
 	const userId = JSON.parse(localStorage.getItem('id'));
 	const [authToken, setAuthToken] = useState(isAnyToken);
 	const [user, setUser] = useState(userId);
+	const [account , setAccount] = useState(false)
 
 	// // //buat manggil fungsinya
 	const setAndGetTokens = (token, id) => {
@@ -40,8 +43,17 @@ function App () {
 		setAuthToken(token);
 		setUser(id);
 	};
+
+	const toggleLogin = () => {
+		setAccount((statss) =>{
+			const toggleCoba = statss ? false : true
+			return toggleCoba
+		})
+	}
   return (
     <>
+	<accountContext.Provider value={{account,setAccount}}>
+
 		<AuthContext.Provider value={{authToken, setAndGetTokens, user}}>
 			<BrowserRouter>
     	<Routes>
@@ -79,6 +91,7 @@ function App () {
 		</Routes>
 		</BrowserRouter>
 		</AuthContext.Provider>
+	</accountContext.Provider>
   </>
   )
 }

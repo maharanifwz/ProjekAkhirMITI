@@ -28,9 +28,9 @@ export const AppFooter = () => {
             <h4>Mari Terhubung</h4>
             <ul className='socials'>
             <li><a href="https://www.facebook.com/"><i class="fa-brands fa-whatsapp-square fa-2x"></i></a></li>
-            <li><a href="https://www.twitter.com/"><i class="fa-brands fa-instagram-square fa-2x"></i></a></li>
-            <li><a href="https://www.instagram.com/"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
-            <li><a href="https://www.instagram.com/"><i class="fa-brands fa-facebook-square fa-2x"></i></a></li>
+            <li><a href="https://www.instagram.com/petmate_id/"><i class="fa-brands fa-instagram-square fa-2x"></i></a></li>
+            <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
+            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-square fa-2x"></i></a></li>
         </ul>
             </Col>
             <Col span={8}>

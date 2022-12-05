@@ -5,27 +5,33 @@ import { Row, Col, Card } from 'antd'
 const items = [
     {
       key: '1',
-      image: 'rayhan',
-      title: 'Rayhan Syahrizal',
-      describe: 'sebagai Product Manejemen'
+      image: 'zidan',
+      title: 'Maulana Zidhan',
+      describe: 'sebagai Marketing'
     },
     {
       key: '2',
-      image: 'imel',
-      title: 'Imelda Fransisca',
-      describe: 'sebagai Product Desainer'
+      image: 'alvaro',
+      title: 'Archangela Muhammad',
+      describe: 'sebagai Marketing'
     },
     {
       key: '3',
       image: 'hani',
       title: 'Maharani Fawwaz',
-      describe: 'sebagai Front End'
+      describe: 'sebagai CEO'
     },
     {
         key: '4',
-        image: 'adit',
-        title: 'Aditya Rizky',
-        describe: 'sebagai Back End'
+        image: 'azfar',
+        title: 'Azfar Risla Alkhowarizmi',
+        describe: 'sebagai CTO'
+      },
+      {
+        key: '5',
+        image: 'stefanus',
+        title: 'Stefanus Fabiano',
+        describe: 'sebagai Product'
       },
   ]
 
@@ -39,7 +45,7 @@ export const AppProfile = () => {
                 <Row gutter={[16, 16]}>
                     {items.map(item => {
                     return (
-                        <Col span={4} key={item.key} style={{marginLeft:75}}>
+                        <Col span={3} key={item.key} style={{marginLeft:75}}>
                         <center><div className='content'>
                             <img src={require('../../assets/' + item.image + '.png')}/>
                             <h5>{item.title}</h5>

@@ -1,7 +1,7 @@
 export const dataList = [
     {
         id: 1,
-        title: 'Andista Animal Care',
+        NameClinic: 'Andista Animal Care',
         serviceTime: '09.00 - 24.00 WIB',
         location: 'jakarta',
         address: 'Jl. Kamboja No.2C, Jakarta Barat',
@@ -9,7 +9,7 @@ export const dataList = [
     },
     {
         id: 2,
-        title: 'Mascota Pet Care',
+        NameClinic: 'Mascota Pet Care',
         serviceTime: '09.00 - 20.00 WIB',
         location: 'malang',
         address: 'Jl. Kav. Perkebunan Raya, Bekasi',
@@ -17,7 +17,7 @@ export const dataList = [
       },
       {
         id: 3,
-        title: 'Dialo Vet Animal Care',
+        NameClinic: 'Dialo Vet Animal Care',
         serviceTime: '08.00 - 17.00 WIB',
         location: 'surabaya',
         address: 'Jl. Raya Sukahati No. 12A, Bogor',
@@ -25,7 +25,7 @@ export const dataList = [
       },
       {
         id: 4,
-        title: 'Andista Animal Care',
+        NameClinic: 'Andista Animal Care',
         serviceTime: '09.00 - 24.00 WIB',
         location: 'jakarta',
         address: 'Jl. Kamboja No.2C, Jakarta Barat',
@@ -33,7 +33,7 @@ export const dataList = [
     },
     {
         id: 5,
-        title: 'Mascota Pet Care',
+        NameClinic: 'Mascota Pet Care',
         serviceTime: '09.00 - 20.00 WIB',
         location: 'malang',
         address: 'Jl. Kav. Perkebunan Raya, Bekasi',
@@ -41,7 +41,7 @@ export const dataList = [
       },
       {
         id: 6,
-        title: 'Dialo Vet Animal Care',
+        NameClinic: 'Dialo Vet Animal Care',
         serviceTime: '08.00 - 17.00 WIB',
         location: 'surabaya',
         address: 'Jl. Raya Sukahati No. 12A, Bogor',
@@ -49,7 +49,7 @@ export const dataList = [
       },
       {
         id: 7,
-        title: 'Andista Animal Care',
+        NameClinic: 'Andista Animal Care',
         serviceTime: '09.00 - 24.00 WIB',
         location: 'jakarta',
         address: 'Jl. Kamboja No.2C, Jakarta Barat',
@@ -57,7 +57,7 @@ export const dataList = [
     },
     {
         id: 8,
-        title: 'Mascota Pet Care',
+        NameClinic: 'Mascota Pet Care',
         serviceTime: '09.00 - 20.00 WIB',
         location: 'malang',
         address: 'Jl. Kav. Perkebunan Raya, Bekasi',
@@ -65,7 +65,7 @@ export const dataList = [
       },
       {
         id: 9,
-        title: 'Dialo Vet Animal Care',
+        NameClinic: 'Dialo Vet Animal Care',
         serviceTime: '08.00 - 17.00 WIB',
         location: 'surabaya',
         address: 'Jl. Raya Sukahati No. 12A, Bogor',
@@ -73,7 +73,7 @@ export const dataList = [
       },
       {
         id: 10,
-        title: 'Andista Animal Care',
+        NameClinic: 'Andista Animal Care',
         serviceTime: '09.00 - 24.00 WIB',
         location: 'jakarta',
         address: 'Jl. Kamboja No.2C, Jakarta Barat',
@@ -81,7 +81,7 @@ export const dataList = [
     },
     {
         id: 11,
-        title: 'Mascota Pet Care',
+        NameClinic: 'Mascota Pet Care',
         serviceTime: '09.00 - 20.00 WIB',
         location: 'malang',
         address: 'Jl. Kav. Perkebunan Raya, Bekasi',
@@ -89,7 +89,7 @@ export const dataList = [
       },
       {
         id: 12,
-        title: 'Dialo Vet Animal Care',
+        NameClinic: 'Dialo Vet Animal Care',
         serviceTime: '08.00 - 17.00 WIB',
         location: 'surabaya',
         address: 'Jl. Raya Sukahati No. 12A, Bogor',
@@ -114,7 +114,7 @@ export const communityList = [
     },
     {
       id: 3,
-      title: 'Komunitas Hamster Malang',
+      title: 'Komunitas Hamster Jawa Timur',
       location: 'surabaya',
       established: 'Berdiri sejak 4 September 2020',
       coverSrc: '/images/komunitas3.png',

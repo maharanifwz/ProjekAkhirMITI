@@ -226,6 +226,8 @@ block
 .content {
   text-align: center;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -669,11 +671,17 @@ footer
 .profile {
   margin: 0 auto;
   text-align: center;
+
 }
 
 .profile h5 {
   color: #829C5F;
   font-weight: bolder;
+}
+
+.profile p {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .profile h2 {

@@ -77,6 +77,7 @@ const steps = [
                             style={{width:300}}
                             placeholder="Pilih Jenis Hewan"
                             onChange={onChange}
+
                         >
                             <Option value="Kucing">Kucing</Option>
                             <Option value="Anjing">Anjing</Option>
@@ -95,7 +96,7 @@ const steps = [
 
                 <Col span={12}>
                     <h6>Ras</h6>
-                    <Input style={{width:300}} placeholder="Ras (contoh : pomeranian)"/>
+                    <Input style={{width:300, required: true}} placeholder="Ras (contoh : pomeranian)"/>
                 </Col>
                 <Col span={12}>
                     <h6>Waktu</h6>

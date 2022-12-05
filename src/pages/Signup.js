@@ -14,33 +14,11 @@ export const Signup = () => {
 
   let navigate = useNavigate();
 
-  const handleSignup = async (values) => {
-    setLoading(true);
-    // register usernya
-    try {
-      const registerResponse = await Axios.post(
-        "http://intern-7.eba-27tmcxsh.ap-southeast-1.elasticbeanstalk.com/user/register",
-        values
-      );
+  const handleSignup = () => {
 
-      // jika sukses, simpan token dan ID dari response agar dianggap login 
-      console.log(registerResponse);
-      if (registerResponse.status === 201) {
-        const token = registerResponse.data.data.Token;
-        const id = registerResponse.data.data.ID;
-        setAndGetTokens(token, id);
-        navigate("/");
-      }
-    } catch (error) {
-      setIsError((isError) => ({
-        status: true,
-        message: "Error while try to sign up",
-      }));
-      console.log(error);
+    navigate('/signin')
+    
     }
-
-    setLoading(false);
-  };
   return (
     <div className="block signin">
       <div className="container-fluid">

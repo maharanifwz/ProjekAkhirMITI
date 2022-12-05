@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Form, Input, Button } from "antd";
 import styled from "styled-components";
 import { ButtonContainer } from "../components/home/Hero";
@@ -7,6 +7,7 @@ import { useAuth } from "../config/Auth";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Axios from "axios";
+import { accountContext } from "../App";
 
 const ErrorMessage = styled.p`
   color: red;
@@ -38,51 +39,22 @@ export const Signin = () => {
   const { setAndGetTokens } = useAuth();
   const [isError, setIsError] = useState({ status: false, message: "" });
   const [Loading, setLoading] = useState(false);
+  const {account,setAccount} = useContext(accountContext)
   const navigate = useNavigate();
 
-  const handleLogin = async (values) => {
-    setLoading(true);
 
-    try {
-      const loginResponse = await Axios.post(
-        "http://intern-7.eba-27tmcxsh.ap-southeast-1.elasticbeanstalk.com/user/login",
-        values
-      );
-
-      console.log(loginResponse);
-      //jika loginnya sukses
-      if (loginResponse.status === 200) {
-        //ambil tokennya
-        /*data yg pertama itu data dari loginResponsenya,
-            data yang kedua data hasi keluaran dari responnya
-            coba cek link yg ada di api.js*/
-        const token = loginResponse.data.data.Token;
-        //ambil id user yang udh sempet dia register
-        const id = loginResponse.data.data.ID;
-
-        //parameternya diisi sesuai dgn parameter yg ada di app.js
-        //set ke local storage
-        setAndGetTokens(token, id);
-
-        //redirect ke homepage
-        window.location.replace("/");
-      }
-    } catch (error) {
-        console.log(error);
-      setIsError((isError) => ({
-        status: true,
-        message: "Error while try to log in",
-      }));
+  const handleLogin2 = () => {
+    console.log('masok')
+    setAccount(true);
+    navigate('/')
     }
-    setLoading(false);
-  };
 
   return (
     <div className="block signin height">
       <div className="container-fluid">
         <FormSignIn>
           <Form
-            onFinish={handleLogin}
+            onFinish={handleLogin2}
             name="normal_login"
             className="login-form"
             style={{ width: 325 }}
